@@ -2,19 +2,6 @@ const Location = require('../models/Location');
 const Trip = require('../models/Trip');
 const Traveller = require('../models/Traveller');
 
-Traveller.hasMany(Trip, {
-    foreignKey: '',
-    onDelete: 'CASCADE'
-});
-
-Trip.hasOne(Location, {
-    foreignKey: ''
-});
-
-const Traveller = require('./Traveller');
-const Location = require('./Location');
-const Trip = require('./Trip');
-
 Traveller.belongsToMany(Location, {
   // Define the third table needed to store the foreign keys
   through: {

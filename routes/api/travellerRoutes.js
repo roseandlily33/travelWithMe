@@ -37,7 +37,7 @@ router.delete('/:id', async(req,res) => {
                 id: req.params.id
             }
         })
-        id(!delTraveller){
+        if(!delTraveller){
             res.status(404).json({message: 'Traveller not found'});
         }
         res.status(200).json(delTraveller)
@@ -46,3 +46,5 @@ router.delete('/:id', async(req,res) => {
         res.status(500).json(err);
     }
 })
+
+module.exports = router;
