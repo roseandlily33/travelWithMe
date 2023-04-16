@@ -25,7 +25,8 @@ Trip.init(
             allowNull: false,
             references: {
                 model: 'traveller',
-                key: 'id'
+                key: 'id',
+                unique: true,
             }
         },
         location_id: {
@@ -33,6 +34,7 @@ Trip.init(
             references:{
                 model: 'location',
                 key: 'id',
+                unique: true,
             }
         }
     },

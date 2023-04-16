@@ -19,10 +19,11 @@ const seedDatabase = async() => {
         ];
         await Trip.create({
             trip_budget: Math.random() * 10000 + 100,
-            traveller_amonut: Math.floor(Math.random()*10)+1,
+            traveller_amount: Math.floor(Math.random()*8)+1,
             traveller_id: travellerId,
-            location_id: locationId
+            location_id: locationId,
         })
+        
     }} catch(err){
         console.log(err);
     }
